@@ -138,10 +138,10 @@
     <div class="project-grid">
 
       <div class="project-card">
-        <div class="project-placeholder">AGNIYAR BASIN</div>
-        <h4>Morphometric Analysis of Agniyar River Basin</h4>
+        <div class="project-placeholder">Morphometric Analysis of Agniyar River Basin</div>
+        <h4></h4>
         <p>Comprehensive morphometric analysis using SRTM DEM in ArcGIS Pro & QGIS. Calculated 
-           linear, areal and relief parameters to assess runoff potential and erosion risk.</p>
+           linear, areal and relief parameters to assess runoff potential. First time ever presentation in Blender 3D -PG Project M.Sc. Applied Geography.</p>
 
         <!-- 🎥 Auto-playing morphometric video -->
         <video 
@@ -155,6 +155,47 @@
         </video>
       </div>
     </div>
+    <!-- AI Background Remover Project -->
+<div class="project-card">
+  <div class="project-placeholder">AI BACKGROUND REMOVER</div>
+  <h4>AI Background Remover — Web App</h4>
+  <p>
+    Built a live AI-powered web application that removes image backgrounds automatically using
+    <strong>U-2-Net deep learning model</strong>. Developed with Python (Flask), HTML/CSS/JS and deployed on
+    Render Cloud. Supports transparent PNG export and drag-and-drop upload.
+  </p>
+
+  <!-- Optional video preview (replace filename if needed) -->
+  <video
+      autoplay
+      loop
+      muted
+      playsinline
+      style="width:100%;border-radius:10px;margin-top:10px;box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+      <source src="AI_sample_vid" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+
+  <a href="https://jacobbay-ai-background-remover.onrender.com" target="_blank" class="btn-outline" style="margin-top:12px;display:inline-block;">
+    Launch App
+  </a>
+</div>
+<div class="project-card">
+  <div class="project-placeholder">Kerala Crash Analysis (NATPAC)</div>
+  <h4>Spatio-Temporal Road Crash Hotspot Detection — Kerala</h4>
+  <p>Performed hotspot detection using Kernel Density Estimation, Space-Time Cube, and
+     temporal heat mapping for 2021–2023 Kerala Police accident dataset using ArcGIS Pro.</p>
+
+  <!-- 🚀 PPT Preview Button -->
+  <a href="https://github.com/USERNAME/REPO/raw/main/kerala_crash_study.pptx"
+     target="_blank"
+     class="btn-outline"
+     style="margin-top:12px;display:inline-block;">
+     Preview Presentation (PPT)
+  </a>
+</div>
+
+
   </section>
 
   <!-- CONTACT -->
@@ -172,15 +213,46 @@
 </footer>
 
 <script>
-// smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(function(a){
-  a.addEventListener('click',function(e){
+// NAVIGATION — FADE + SLIDE ANIMATIONS
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav a");
+
+// hide all except home
+sections.forEach(sec => sec.style.display = "none");
+document.querySelector("#home").style.display = "block";
+
+navLinks.forEach(link => {
+  link.addEventListener("click", function (e) {
     e.preventDefault();
-    var id=this.getAttribute('href');
-    if(id && id!=='#') document.querySelector(id).scrollIntoView({behavior:'smooth'});
+
+    const targetId = this.getAttribute("href");
+    const targetSection = document.querySelector(targetId);
+
+    // hide all sections
+    sections.forEach(sec => {
+      sec.style.opacity = "0";
+      sec.style.transform = "translateY(40px)";
+      setTimeout(() => sec.style.display = "none", 300);
+    });
+
+    // show clicked section with animation
+    setTimeout(() => {
+      targetSection.style.display = "block";
+      targetSection.style.opacity = "0";
+      targetSection.style.transform = "translateY(30px)";
+
+      setTimeout(() => {
+        targetSection.style.opacity = "1";
+        targetSection.style.transform = "translateY(0)";
+      }, 10);
+    }, 300);
+
+    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
 </script>
+
+
 
 </body>
 </html>

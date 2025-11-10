@@ -39,3 +39,42 @@ body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:#e6eef
 
 /* responsive */
 @media (max-width:900px){.hero-grid{flex-direction:column-reverse}.hero-right{width:220px}.hero-left h1{font-size:32px}}
+
+/* hide all sections except home */
+section:not(#home) {
+  display: none;
+}
+
+section {
+  animation: fadeIn .4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Prevent sections from hiding behind the header */
+section {
+  padding-top: 90px;  /* pushes every section below the fixed navbar */
+}
+
+/* Hero already has correct top padding, so reset */
+#home {
+  padding-top: 120px;
+}
+#about {
+  padding-top: 140px !important;
+}
+
+#skills {
+  padding-top: 140px !important;
+}
+
+#projects {
+  padding-top: 140px !important;
+}
+
+#contact {
+  padding-top: 140px !important;
+}
