@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jacob Sapphire J C — GIS & AI Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Jacob Sapphire J C — GIS Analyst, Remote Sensing Specialist & AI Developer.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand"> Portfolio </div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <h4>Hello, It's Me</h4>
+      <h1>Jacob Sapphire J C</h1>
+      <h2>And I'm a <span class="accent">GIS Analyst & AI Developer</span></h2>
+      <p class="lead">Organized and dependable candidate successful at managing multiple priorities with a positive attitude. Willing to take on added responsibilities to meet team goals.</p>
+      <div class="socials">
+        <a href="mailto:Sapphireajs@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/jacob-sapphire-4657a327a" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://jacobbay-ai-background-remover.onrender.com" target="_blank" title="AI App"><i class="fas fa-rocket"></i></a>
+      </div>
+      <a class="btn" href="#about">More About Me</a>
+    </div>
+    <div class="hero-right">
+      
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <section id="about" class="section-card">
+    <h3>About</h3>
+    <p>I am a GIS & Remote Sensing specialist with experience in morphometric analysis, spatial analysis, and AI-based image processing. During an internship at KSCSTE-NATPAC (May–July 2024) I performed spatio-temporal analysis of transport crash data including hotspot analysis, kernel density estimation, IDW interpolation, 3D space-time cube visualizations and creation of police jurisdiction boundaries in ArcGIS Pro.</p>
+  </section>
+
+  <section id="skills" class="section-card">
+    <h3>Skills</h3>
+    <ul class="skill-list">
+      <li>ArcGIS Pro</li>
+      <li>ArcMap</li>
+      <li>QGIS</li>
+      <li>Erdas Imagine</li>
+      <li>Figma · Blender 3D · Adobe Suite</li>
+      <li>Python · Flask · HTML/CSS/JS</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section-card">
+    <h3>Projects</h3>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="project_thumb.png" alt="AI Background Remover screenshot" class="project-thumb">
+        <h4>AI Background Remover</h4>
+        <p>Flask + U‑2‑Net web app for automatic background removal. Transparent PNG output and a simple drag-and-drop UI.</p>
+        <a class="btn-outline" href="https://jacobbay-ai-background-remover.onrender.com" target="_blank">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-placeholder">AGNIYAR BASIN</div>
+        <h4>Morphometric Analysis of Agniyar River Basin</h4>
+        <p>Comprehensive morphometric analysis using SRTM DEM in ArcGIS Pro & QGIS. Calculated linear, areal and relief parameters to assess runoff potential and erosion risk.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-card">
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:Sapphireajs@gmail.com">Sapphireajs@gmail.com</a><br>Phone: +91 93846 30838<br>Location: Chennai, Tamil Nadu</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">© 2025 Jacob Sapphire J C — All Rights Reserved</div>
+</footer>
+
+<script>
+// smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var id=this.getAttribute('href');
+    if(id && id!=='#') document.querySelector(id).scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
