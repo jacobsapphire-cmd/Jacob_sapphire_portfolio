@@ -127,19 +127,30 @@
 
     <h4>Professional Work &mdash; Dam Safety Decision Support System (2026)</h4>
     <p>
-      Contributed as a full-stack AI developer on a <strong>real-time Dam Flood Modelling DSS</strong>
-      covering North Carolina dams (Fontana, Falls Lake &amp; Mount Island). Built a multi-dam flood simulation platform featuring a
-      CUDA-accelerated Shallow Water Equation (SWE) solver, live USGS sensor integration,
-      3D terrain visualisation, and AI-powered dam safety analytics.
+      Contributed as a Full-Stack AI Developer on a <strong>Real-Time Dam Flood Modelling DSS</strong> covering North Carolina.
+      Designed and engineered a high-performance web platform to help emergency managers and engineers monitor dam health and predict flood impacts dynamically.
     </p>
-
     <ul class="bullet-points">
-      <li>Built live USGS NWIS sensor pipeline &mdash; real-time stage &amp; discharge for Falls Lake, Fontana &amp; Mount Island dams</li>
-      <li>Added CUDA absorbing outflow boundary kernel to fix wave-reflection instability in the SWE solver</li>
-      <li>Implemented 3D affected-roads ribbon mesh with bilinear terrain sampling and hazard-colour widths</li>
-      <li>Built Release Optimizer panel &mdash; sweeps CUDA solver across 25/50/100% release scenarios, counts flooded buildings, auto-recommends optimal release rate</li>
-      <li>Designed spatial glassmorphism UI with mouse parallax (dark #0d0d0d, purple #bb86fc accent)</li>
-      <li>Tech Stack: FastAPI &middot; React 18 + TypeScript &middot; Vite &middot; Three.js/CesiumJS &middot; CUDA &middot; Leaflet &middot; Recharts</li>
+      <li>Integrated real-time sensor pipelines for live water level and discharge monitoring.</li>
+      <li>Developed an interactive 3D terrain visualisation system to map flood hazards and affected infrastructure.</li>
+      <li>Built AI-driven analytics dashboards for structural health scoring and spillway release optimization.</li>
+      <li>Implemented an intuitive, modern user interface for complex spatial data analysis.</li>
+      <li>Tech Stack: FastAPI &middot; React 18 &middot; TypeScript &middot; CesiumJS &middot; High-Performance Computing (CUDA)</li>
+    </ul>
+
+    <hr>
+
+    <h4>Professional Work &mdash; Coastal Disaster Risk Analyser (2026)</h4>
+    <p>
+      Developed a comprehensive <strong>Coastal Flood Simulation Dashboard</strong> for Lee County, FL. 
+      This platform assists government agencies and planners in assessing hurricane storm surges, sea-level rise scenarios, and coordinating emergency responses.
+    </p>
+    <ul class="bullet-points">
+      <li>Built a dynamic 3D globe visualization for exploring flood impacts and affected buildings.</li>
+      <li>Implemented an intelligent evacuation routing system with real-time traffic awareness.</li>
+      <li>Developed a Drone Command Center feature for planning aerial patrol missions and coordinating field rescuers.</li>
+      <li>Created automated PDF report generation and economic impact dashboards for risk assessment.</li>
+      <li>Tech Stack: FastAPI &middot; React &middot; TypeScript &middot; CesiumJS &middot; Leaflet</li>
     </ul>
 
   </section>
@@ -372,22 +383,37 @@
 
 
 <div class="project-card">
-  <div class="project-placeholder">Dam Safety DSS &mdash; Real-Time Flood Simulation</div>
+  <div class="project-placeholder">Dam Safety DSS &mdash; Flood Simulation Platform</div>
   <h4>Dam Flood Modelling &amp; Safety Decision Support System</h4>
   <p>
-    Full-stack AI platform for real-time dam breach flood simulation, covering North Carolina &mdash; Fontana (Graham County), Falls Lake (Wake County) &amp; Mount Island (Mecklenburg County).
-    Features a <strong>CUDA SWE solver</strong>, live <strong>USGS sensor feeds</strong>,
-    AI crack detection, spillway release advisor, virtual seepage monitor, 3D terrain with
-    affected-roads visualisation, and a consequence-aware release optimizer.
-    Covers three dams: <strong>Falls Lake, Fontana &amp; Mount Island</strong>.
+    A professional-grade AI platform for real-time dam safety monitoring and flood simulation. 
+    Built to empower emergency responders with actionable insights, the system features live 
+    hydrological data integration, interactive 3D hazard mapping, and intelligent release optimization.
   </p>
   <ul class="bullet-points" style="margin:8px 0 12px 16px;color:#94a3b8;font-size:0.88rem;">
-    <li>CUDA-accelerated SWE solver (MUSCL+Roe+Heun) &mdash; peak Q 417,120 m&sup3;/s validated</li>
-    <li>Live USGS NWIS sensor data &mdash; stage, discharge, 7-day pool trends per dam</li>
-    <li>3D ribbon-mesh road draping with bilinear terrain sampling</li>
-    <li>Release Optimizer: sweeps CUDA scenarios, counts flooded buildings, recommends safe release</li>
-    <li>Dam Health Passport &mdash; 0&ndash;100 score from age, seismic, freeze-thaw, hydrologic stress</li>
-    <li>Tech: FastAPI &middot; React 18+TS &middot; Vite &middot; Three.js/CesiumJS &middot; CUDA &middot; Leaflet &middot; Recharts</li>
+    <li>High-performance flood simulation engine with real-time results.</li>
+    <li>Interactive 3D visualization of affected areas and critical infrastructure.</li>
+    <li>Live integration of river gauge data for continuous monitoring.</li>
+    <li>AI-assisted tools for assessing structural health and optimizing spillway releases.</li>
+    <li>Sleek, responsive UI designed for critical decision-making.</li>
+    <li>Tech: FastAPI &middot; React 18 &middot; TypeScript &middot; CesiumJS &middot; CUDA</li>
+  </ul>
+</div>
+
+<div class="project-card">
+  <div class="project-placeholder">Coastal Risk Analyser &mdash; Emergency Planning</div>
+  <h4>Coastal Disaster Risk Analyser</h4>
+  <p>
+    An advanced web application tailored for coastal emergency management and climate resilience planning in Florida. 
+    The platform allows users to visualize hurricane storm surges, project sea-level rise scenarios, and 
+    coordinate response efforts through an immersive 3D interface.
+  </p>
+  <ul class="bullet-points" style="margin:8px 0 12px 16px;color:#94a3b8;font-size:0.88rem;">
+    <li>Interactive 3D globe for mapping flood zones and building-level impacts.</li>
+    <li>Advanced evacuation routing system to guide citizens to safety.</li>
+    <li>Integrated Drone Monitoring module for planning autonomous aerial surveys.</li>
+    <li>Comprehensive risk assessment tools including economic impact estimation and reporting.</li>
+    <li>Tech: FastAPI &middot; React &middot; TypeScript &middot; CesiumJS &middot; Leaflet</li>
   </ul>
 </div>
   </section>
