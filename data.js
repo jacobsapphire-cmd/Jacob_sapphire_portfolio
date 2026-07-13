@@ -126,6 +126,29 @@ const portfolioData = {
       video:       "space_time_cube.mp4",
       pdf:         "kerala_crash_study.pdf",
       link:        null
+    },
+    {
+      id:          "dam-safety",
+      label:       "AI Platform",
+      title:       "Dam Flood Modelling & Safety Decision Support System",
+      subtitle:    "FastAPI · React 18 · CesiumJS · CUDA",
+      description: "A professional-grade AI platform for real-time dam safety monitoring and flood simulation. Empowers emergency responders with live hydrological data integration, interactive 3D hazard mapping, and intelligent spillway release optimization.",
+      stack:       ["FastAPI", "React 18", "TypeScript", "CesiumJS", "CUDA"],
+      video:       null,
+      pdf:         null,
+      link:        null
+    },
+    {
+      id:          "coastal-risk",
+      label:       "Disaster Management",
+      title:       "Coastal Disaster Risk Analyser",
+      subtitle:    "FastAPI · React · CesiumJS · Leaflet",
+      description: "Advanced web application for coastal emergency management and climate resilience planning. Visualizes hurricane storm surges, sea-level rise scenarios, and coordinates response through an immersive 3D globe with evacuation routing and drone monitoring.",
+      stack:       ["FastAPI", "React", "TypeScript", "CesiumJS", "Leaflet"],
+      video:       null,
+      pdf:         null,
+      link:        null
     }
+
   ]
 };
