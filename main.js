@@ -97,13 +97,20 @@ function buildProjects() {
         <i class="fa-solid fa-file-pdf"></i> View PDF
       </a>`);
 
+    const mediaHtml = p.video
+      ? `<video autoplay loop muted playsinline>
+           <source src="${p.video}" type="video/mp4">
+         </video>`
+      : `<div class="project-no-video">
+           <i class="fa-solid fa-diagram-project"></i>
+           <span>${p.title}</span>
+         </div>`;
+
     return `
       <div class="project-card reveal" id="card-${p.id}">
         <div class="project-media">
           ${p.label ? `<span class="project-label">${p.label}</span>` : ''}
-          <video autoplay loop muted playsinline>
-            <source src="${p.video}" type="video/mp4">
-          </video>
+          ${mediaHtml}
         </div>
         <div class="project-info">
           <div class="project-subtitle">${p.subtitle}</div>
