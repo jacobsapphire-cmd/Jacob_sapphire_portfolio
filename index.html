@@ -2,690 +2,241 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Jacob Sapphire J C — GIS & AI Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <meta name="description" content="Jacob Sapphire J C — GIS Analyst, Remote Sensing Specialist & AI Developer.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jacob Sapphire J C — GIS Analyst & AI Developer</title>
+  <meta name="description" content="Jacob Sapphire J C — GIS Analyst, Remote Sensing Specialist & AI Developer. Portfolio showcasing morphometric analysis, AI projects, and geospatial research.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="brand"> Portfolio </div>
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+
+<!-- ═══════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <div class="brand">Jacob Sapphire</div>
+    <nav class="nav" id="main-nav">
+      <a href="#home"     class="nav-link active" id="nav-home">Home</a>
+      <a href="#about"    class="nav-link"         id="nav-about">About</a>
+      <a href="#skills"   class="nav-link"         id="nav-skills">Skills</a>
+      <a href="#projects" class="nav-link"         id="nav-projects">Projects</a>
+      <a href="#contact"  class="nav-link"         id="nav-contact">Contact</a>
     </nav>
   </div>
 </header>
 
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
 <section id="home" class="hero">
   <div class="container hero-grid">
+
+    <!-- Left content -->
     <div class="hero-left">
-      <h4>Hello, It's Me</h4>
-      <h1>Jacob Sapphire J C</h1>
-      <h2>And I'm a <span class="fade-text"> </span></h2>
+      <div class="hero-badge">👋 Hello, It's Me</div>
 
+      <h1 class="hero-name">
+        Jacob Sapphire <span class="highlight">J C</span>
+      </h1>
 
-      <p class="lead">Organized and dependable candidate successful at managing multiple priorities with a positive attitude. Willing to take on added responsibilities to meet team goals.</p>
-      <div class="socials">
-        <i class=></i></a>
+      <h2 class="hero-role">
+        And I'm a&nbsp;<span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+      </h2>
+
+      <p class="hero-bio">
+        GIS Analyst &amp; AI Developer transforming geospatial data into actionable insights,
+        interactive dashboards, and web applications — using ArcGIS Pro, QGIS, Python, and Blender 3D.
+      </p>
+
+      <div class="hero-cta">
+        <a href="Jacob_Sapphire_CV.pdf" target="_blank" class="btn-primary" id="hero-cv-btn">
+          <i class="fa-solid fa-download"></i> Download CV
+        </a>
+        <a href="#contact" class="btn-outline" id="hero-contact-btn">
+          <i class="fa-solid fa-envelope"></i> Get In Touch
+        </a>
       </div>
-      
-      <a class="btn-outline" href="Jacob_Sapphire_CV.pdf" target="_blank" style="margin-left:10px;">
-  View CV
-</a>
 
-    </div>
-    <div class="hero-right"></div>
-  </div>
-</section>
-
-<main class="container">
-
-  <!-- ✅ UPDATED ABOUT SECTION -->
-  <section id="about" class="section-card">
-    <h3>More About Me</h3>
-
-    <p>
-      I am <strong>Jacob Sapphire J C</strong>, a GIS Analyst & AI Developer with hands-on experience in
-      spatial analysis, morphometric studies, data visualization and automation using AI and Python.
-      I work with ArcGIS Pro, QGIS, Google Earth Pro, Blender (3D), Python (Flask/FastAPI),
-      React, TypeScript, Three.js, and CUDA to transform geospatial data into actionable insights,
-      interactive dashboards, real-time simulations, and full-stack AI-powered web applications.
-    </p>
-
-    <hr>
-
-    <h4> Post graduate Project — M.Sc. Applied Geography (University of Madras, 2023–2025)</h4>
-    <p>
-      <strong>GIS-Based Morphometric Analysis of Agniyar River Basin, Tamil Nadu</strong><br>
-      Conducted morphometric analysis using SRTM DEM in ArcGIS Pro & QGIS to extract watershed
-      boundaries, hydrology layers (flow direction, flow accumulation, stream order) and compute 
-      linear, areal, and relief morphometric parameters. Generated 2D & 3D visualization models
-      in Blender for terrain interpretation. The results highlight moderate erosion risk and controlled 
-      flood potential.
-    </p>
-
-    <ul class="bullet-points">
-      <li>Tools: ArcGIS Pro, QGIS, Blender (3D), Excel</li>
-      <li>Outputs: Watershed delineation, drainage network, 3D terrain model</li>
-      <li>Data Source: SRTM DEM (USGS Earth Explorer)</li>
-    </ul>
-
-    <hr>
-
-    <h4>AI Project — Background Remover Web App</h4>
-    <p>
-      Developed a live web app using <strong>Python (Flask) + U-2-Net</strong> which automatically removes
-      image backgrounds and exports transparent PNG output. Designed a drag-and-drop UI and 
-      deployed using Render Cloud.
-    </p>
-
-    <ul class="bullet-points">
-      <li>Tech Stack: Flask, U-2-Net, HTML/CSS/JS</li>
-      <li>Produces transparent PNG for editing/design workflows</li>
-      <li>Live Link: Highlighted in Projects</li>
-    </ul>
-
-    <hr>
-
-    <h4> Post graduate Internship — KSCSTE NATPAC (May–July 2024)</h4>
-    <p>
-      Performed <strong>spatio-temporal crash analysis</strong> for Kerala including hotspot analysis, kernel
-      density estimation, spatial autocorrelation, IDW interpolation, and <strong>3D space-time cube modeling</strong>.
-      Created police jurisdiction boundaries and contributed to road safety decision-support planning.
-    </p>
-
-    <ul class="bullet-points">
-      <li>Analyzed 2021–2023 accident data from Kerala Police</li>
-      <li>Identified crash hotspots & high-risk time periods</li>
-      <li>Tools used: ArcGIS Pro, Excel</li>
-    </ul>
-
-    <hr>
-
-    <h4> UG Internship — MAPe IT Solutions Pvt. Ltd., Chennai (Jun–Aug 2022)</h4>
-    <p>
-      Digitized <strong>~377 buildings</strong>, captured footprints, and assigned height attributes using Google
-      Earth Pro, QGIS, and ArcMap. Worked with ArcGIS Toolbox: 3D Analyst, Spatial Statistics,
-      Data Management and Attribute Editing.
-    </p>
-
-    <ul class="bullet-points">
-      <li>3D building vectorization & height measurement</li>
-      <li>Google Earth Pro used for height validation and street-level observation</li>
-      <li>ArcGIS Toolbox: 3D Analyst, Spatial Statistics, Data Management</li>
-    </ul>
-
-    <hr>
-
-    <h4>Professional Work &mdash; Dam Safety Decision Support System (2026)</h4>
-    <p>
-      Contributed as a Full-Stack AI Developer on a <strong>Real-Time Dam Flood Modelling DSS</strong> covering North Carolina.
-      Designed and engineered a high-performance web platform to help emergency managers and engineers monitor dam health and predict flood impacts dynamically.
-    </p>
-    <ul class="bullet-points">
-      <li>Integrated real-time sensor pipelines for live water level and discharge monitoring.</li>
-      <li>Developed an interactive 3D terrain visualisation system to map flood hazards and affected infrastructure.</li>
-      <li>Built AI-driven analytics dashboards for structural health scoring and spillway release optimization.</li>
-      <li>Implemented an intuitive, modern user interface for complex spatial data analysis.</li>
-      <li>Tech Stack: FastAPI &middot; React 18 &middot; TypeScript &middot; CesiumJS &middot; High-Performance Computing (CUDA)</li>
-    </ul>
-
-    <hr>
-
-    <h4>Professional Work &mdash; Coastal Disaster Risk Analyser (2026)</h4>
-    <p>
-      Developed a comprehensive <strong>Coastal Flood Simulation Dashboard</strong> for Lee County, FL. 
-      This platform assists government agencies and planners in assessing hurricane storm surges, sea-level rise scenarios, and coordinating emergency responses.
-    </p>
-    <ul class="bullet-points">
-      <li>Built a dynamic 3D globe visualization for exploring flood impacts and affected buildings.</li>
-      <li>Implemented an intelligent evacuation routing system with real-time traffic awareness.</li>
-      <li>Developed a Drone Command Center feature for planning aerial patrol missions and coordinating field rescuers.</li>
-      <li>Created automated PDF report generation and economic impact dashboards for risk assessment.</li>
-      <li>Tech Stack: FastAPI &middot; React &middot; TypeScript &middot; CesiumJS &middot; Leaflet</li>
-    </ul>
-
-  </section>
-<section id="adobe" class="section-card">
-  <h3>About Adobe</h3>
-  <p style="max-width:700px;line-height:1.7;color:#cfe8ff;">
-    Adobe is used for a wide range of creative and digital tasks, including graphic design, 
-    photo and video editing, web development, and document management, through its various 
-    software applications like Photoshop, Illustrator, and Acrobat. Its products enable 
-    professionals and individuals to create and publish visual content for print, web, 
-    and mobile platforms.
-  </p>
-</section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section-card">
-  <h3 style="text-align:center; color:#00f5ff;">Skills</h3>
-
-  <div class="skills-grid">
-    <!-- LEFT: Technical -->
-    <div class="technical">
-  <h4>Technical Skills</h4>
-
-  <div class="bar">
-    <span>
-      <img src="logos/arcgis.png" alt="ArcGIS" class="skill-logo"> ArcGIS Pro
-    </span>
-    <div class="progress"><div data-width="90"></div></div><p>90%</p>
-  </div>
-
-  <div class="bar">
-    <span>
-      <img src="logos/erdas.png" alt="Erdas Imagine" class="skill-logo"> Erdas Imagine
-    </span>
-    <div class="progress"><div data-width="85"></div></div><p>85%</p>
-  </div>
-
-  <div class="bar">
-    <span>
-      <img src="logos/qgis.png" alt="QGIS" class="skill-logo"> QGIS
-    </span>
-    <div class="progress"><div data-width="80"></div></div><p>80%</p>
-  </div>
-
-  <div class="bar">
-    <span>
-      <img src="logos/autocad.png" alt="AutoCAD" class="skill-logo"> AutoCAD
-    </span>
-    <div class="progress"><div data-width="60"></div></div><p>60%</p>
-  </div>
-
-  <div class="bar">
-    <span>
-      <img src="logos/python.png" alt="Python" class="skill-logo"> Python
-    </span>
-    <div class="progress"><div data-width="75"></div></div><p>75%</p>
-  </div>
-
-  <div class="bar">
-    <span>
-      <img src="logos/ms.png" alt="MS Office" class="skill-logo"> MS Office
-    </span>
-    <div class="progress"><div data-width="90"></div></div><p>90%</p>
-  </div>
-
-  <div class="bar">
-    <span>
-      <img src="logos/blender.png" alt="Blender 3D" class="skill-logo"> Blender 3D
-    </span>
-    <div class="progress"><div data-width="80"></div></div><p>80%</p>
-  </div>
-
-  <div class="bar">
-    <span>
-      <img src="logos/adobe.png" alt="Adobe Suite" class="skill-logo"> Adobe Suite
-    </span>
-    <div class="progress"><div data-width="85"></div></div><p>85%</p>
-  </div>
-
-  <div class="bar">
-    <span>
-      <img src="logos/vs.png" alt="Visual Studio" class="skill-logo"> Visual Studio
-    </span>
-    <div class="progress"><div data-width="75"></div></div><p>75%</p>
-  </div>
-
-  <div class="bar">
-    <span>
-      <img src="logos/figma.png" alt="Figma" class="skill-logo"> Figma
-    </span>
-    <div class="progress"><div data-width="70"></div></div><p>70%</p>
-  </div>
-</div>
-
-
-
-    <!-- RIGHT: Professional -->
-    <div class="professional">
-  <h4>Professional Skills</h4>
-
-  <div class="circle-box">
-    <h5>Resilience</h5>
-    <div class="circle" data-percent="85">
-      <svg>
-        <circle class="bg" cx="50" cy="50" r="45"></circle>
-        <circle class="progress" cx="50" cy="50" r="45"></circle>
-      </svg>
-      <div class="label"><span>85%</span></div>
-    </div>
-  </div>
-
-  <div class="circle-box">
-    <h5>Decision Making</h5>
-    <div class="circle" data-percent="70">
-      <svg>
-        <circle class="bg" cx="50" cy="50" r="45"></circle>
-        <circle class="progress" cx="50" cy="50" r="45"></circle>
-      </svg>
-      <div class="label"><span>70%</span></div>
-    </div>
-  </div>
-
-  <div class="circle-box">
-    <h5>Communication</h5>
-    <div class="circle" data-percent="85">
-      <svg>
-        <circle class="bg" cx="50" cy="50" r="45"></circle>
-        <circle class="progress" cx="50" cy="50" r="45"></circle>
-      </svg>
-      <div class="label"><span>85%</span></div>
-    </div>
-  </div>
-
-  <div class="circle-box">
-    <h5>Adaptability</h5>
-    <div class="circle" data-percent="80">
-      <svg>
-        <circle class="bg" cx="50" cy="50" r="45"></circle>
-        <circle class="progress" cx="50" cy="50" r="45"></circle>
-      </svg>
-      <div class="label"><span>80%</span></div>
-    </div>
-  </div>
-</div>
-
-
-</section>
-
-
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section-card">
-    <h3>Projects</h3>
-    <div class="project-grid">
-
-      <div class="project-card">
-        <div class="project-placeholder">Morphometric Analysis of Agniyar River Basin</div>
-        <h4></h4>
-        <p>Comprehensive morphometric analysis using SRTM DEM in ArcGIS Pro & QGIS. Calculated 
-           linear, areal and relief parameters to assess runoff potential. First time ever presentation in Blender 3D -PG Project M.Sc. Applied Geography.</p>
-          <a href="files/Morphometric_Analysis_Jacob.pdf" 
-   target="_blank" 
-   class="btn-outline">
-   View PDF
-</a>
- 
-
-        <!-- 🎥 Auto-playing morphometric video -->
-        <video 
-          autoplay 
-          loop 
-          muted 
-          playsinline 
-          style="width:100%;border-radius:10px;margin-top:10px;box-shadow:0 4px 12px rgba(0,0,0,0.15);">
-          <source src="morphometric_demo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <div class="hero-socials">
+        <a href="mailto:Sapphireajs@gmail.com"
+           class="social-icon" id="social-email" title="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="tel:+919384630838"
+           class="social-icon" id="social-phone" title="Phone">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://wa.me/919384630838" target="_blank"
+           class="social-icon" id="social-wa" title="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jacob-sapphire-4657a327a" target="_blank"
+           class="social-icon" id="social-li" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
       </div>
     </div>
-    <!-- AI Background Remover Project -->
-<div class="project-card">
-  <div class="project-placeholder">AI BACKGROUND REMOVER</div>
-  <h4>AI Background Remover — Web App</h4>
-  <p>
-    Built a live AI-powered web application that removes image backgrounds automatically using
-    <strong>U-2-Net deep learning model</strong>. Developed with Python (Flask), HTML/CSS/JS and deployed on
-    Render Cloud. Supports transparent PNG export and drag-and-drop upload.
-  </p>
 
-  <!-- Optional video preview (replace filename if needed) -->
-  <video
-      autoplay
-      loop
-      muted
-      playsinline
-      style="width:100%;border-radius:10px;margin-top:10px;box-shadow:0 4px 12px rgba(0,0,0,0.15);">
-      <source src="AI_sample_vid" type="video/mp4">
-      Your browser does not support the video tag.
-  </video>
-
-  <a href="https://jacobbay-ai-background-remover.onrender.com" target="_blank" class="btn-outline" style="margin-top:12px;display:inline-block;">
-    Launch App
-  </a>
-</div>
-<div class="project-card">
-  <div class="project-placeholder">Kerala Crash Analysis (NATPAC)</div>
-  <h4>Spatio-Temporal Road Crash Hotspot Detection — Kerala</h4>
-  <p>Performed hotspot detection using Kernel Density Estimation, Space-Time Cube, and
-     temporal heat mapping for 2021–2023 Kerala Police accident dataset using ArcGIS Pro.</p>
-
-  <!-- 🚀 PPT Preview Button -->
- <a href="kerala_crash_study.pdf"
-   target="_blank"
-   class="btn-outline"
-   style="margin-top:12px;display:inline-block;">
-   View Project PDF
-</a>
-        <video 
-          autoplay 
-          loop 
-          muted 
-          playsinline 
-          style="width:100%;border-radius:10px;margin-top:10px;box-shadow:0 4px 12px rgba(0,0,0,0.15);">
-          <source src="space_time_cube.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+    <!-- Right — profile photo -->
+    <div class="hero-right">
+      <div class="photo-wrapper">
+        <div class="photo-ring"></div>
+        <div class="photo-glow">
+          <img src="1000179585.png" alt="Jacob Sapphire J C" class="profile-photo">
+        </div>
       </div>
-</div>
-
-
-
-<div class="project-card">
-  <div class="project-placeholder">Dam Safety DSS &mdash; Flood Simulation Platform</div>
-  <h4>Dam Flood Modelling &amp; Safety Decision Support System</h4>
-  <p>
-    A professional-grade AI platform for real-time dam safety monitoring and flood simulation. 
-    Built to empower emergency responders with actionable insights, the system features live 
-    hydrological data integration, interactive 3D hazard mapping, and intelligent release optimization.
-  </p>
-  <ul class="bullet-points" style="margin:8px 0 12px 16px;color:#94a3b8;font-size:0.88rem;">
-    <li>High-performance flood simulation engine with real-time results.</li>
-    <li>Interactive 3D visualization of affected areas and critical infrastructure.</li>
-    <li>Live integration of river gauge data for continuous monitoring.</li>
-    <li>AI-assisted tools for assessing structural health and optimizing spillway releases.</li>
-    <li>Sleek, responsive UI designed for critical decision-making.</li>
-    <li>Tech: FastAPI &middot; React 18 &middot; TypeScript &middot; CesiumJS &middot; CUDA</li>
-  </ul>
-</div>
-
-<div class="project-card">
-  <div class="project-placeholder">Coastal Risk Analyser &mdash; Emergency Planning</div>
-  <h4>Coastal Disaster Risk Analyser</h4>
-  <p>
-    An advanced web application tailored for coastal emergency management and climate resilience planning in Florida. 
-    The platform allows users to visualize hurricane storm surges, project sea-level rise scenarios, and 
-    coordinate response efforts through an immersive 3D interface.
-  </p>
-  <ul class="bullet-points" style="margin:8px 0 12px 16px;color:#94a3b8;font-size:0.88rem;">
-    <li>Interactive 3D globe for mapping flood zones and building-level impacts.</li>
-    <li>Advanced evacuation routing system to guide citizens to safety.</li>
-    <li>Integrated Drone Monitoring module for planning autonomous aerial surveys.</li>
-    <li>Comprehensive risk assessment tools including economic impact estimation and reporting.</li>
-    <li>Tech: FastAPI &middot; React &middot; TypeScript &middot; CesiumJS &middot; Leaflet</li>
-  </ul>
-</div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section-card">
-  <h3>Contact Me</h3>
-  <h4 style="margin-top:-12px;color:#cfe8ff;">Let's Work Together</h4>
-
-  <p style="max-width:600px;line-height:1.6;color:#94a3b8;">
-    Actively seeking full-time roles, freelance projects, and collaborations. Let’s connect.
-  </p>
-
-  <div class="contact-container">
-
-    <!-- Email -->
-    <div class="contact-item">
-      <a href="mailto:Sapphireajs@gmail.com" target="_blank" class="icon-link">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-      <a href="mailto:Sapphireajs@gmail.com" class="text-link">Sapphireajs@gmail.com</a>
-    </div>
-
-    <!-- Phone -->
-    <div class="contact-item">
-      <a href="tel:+919384630838" class="icon-link">
-        <i class="fa-solid fa-phone"></i>
-      </a>
-      <a href="tel:+919384630838" class="text-link">+91 93846 30838</a>
-    </div>
-
-    <!-- WhatsApp -->
-    <div class="contact-item">
-      <a href="https://wa.me/919384630838" target="_blank" class="icon-link">
-        <i class="fa-brands fa-whatsapp"></i>
-      </a>
-      <a href="https://wa.me/919384630838" target="_blank" class="text-link">WhatsApp Chat</a>
-    </div>
-
-    <!-- LinkedIn -->
-    <div class="contact-item">
-      <a href="https://www.linkedin.com/in/jacob-sapphire-4657a327a" target="_blank" class="icon-link">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/jacob-sapphire-4657a327a" target="_blank" class="text-link">
-        linkedin.com/in/jacob-sapphire-4657a327a
-      </a>
     </div>
 
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
 
-</main>
+    <div class="section-header">
+      <div class="section-tag">Who Am I</div>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-divider"></div>
+    </div>
 
+    <div class="about-content">
+
+      <!-- Bio card -->
+      <div class="about-bio glass-card reveal">
+        <p>
+          I am <strong>Jacob Sapphire J C</strong>, a GIS Analyst &amp; AI Developer with
+          hands-on experience in spatial analysis, morphometric studies, data visualization,
+          and automation using AI and Python.
+        </p>
+        <p>
+          I work with <strong>ArcGIS Pro, QGIS, Google Earth Pro, Blender 3D,</strong> and
+          <strong>Python (Flask)</strong> to transform geospatial data into actionable insights,
+          interactive dashboards, and web applications.
+        </p>
+        <p>
+          My PG project — <strong>GIS-Based Morphometric Analysis of Agniyar River Basin</strong> —
+          involved watershed delineation, hydrology layer extraction, and the first 3D Blender
+          terrain visualization in the PG Geography programme at University of Madras.
+        </p>
+
+        <div class="about-stats">
+          <div>
+            <div class="stat-num">2+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div>
+            <div class="stat-num">3</div>
+            <div class="stat-label">Major Projects</div>
+          </div>
+          <div>
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Tools Mastered</div>
+          </div>
+          <div>
+            <div class="stat-num">2</div>
+            <div class="stat-label">Internships</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline — populated by main.js -->
+      <div>
+        <div class="timeline-header">Experience &amp; Education</div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     SKILLS
+════════════════════════════════════════════════════════ -->
+<section id="skills">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-tag">What I Know</div>
+      <h2 class="section-title">Skills</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="skills-layout">
+      <!-- Technical bars — populated by main.js -->
+      <div class="glass-card skills-panel">
+        <div class="skills-panel-title">Technical Skills</div>
+        <div id="skill-bars"></div>
+      </div>
+
+      <!-- Professional circles — populated by main.js -->
+      <div class="glass-card skills-panel">
+        <div class="skills-panel-title">Professional Skills</div>
+        <div class="circles-grid" id="skill-circles"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-tag">My Work</div>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Cards populated by main.js -->
+    <div class="projects-grid" id="projects-grid"></div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-tag">Let's Talk</div>
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">
+        Actively seeking full-time roles, freelance projects, and collaborations.
+      </p>
+    </div>
+
+    <!-- Cards populated by main.js -->
+    <div class="contact-grid" id="contact-grid"></div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
 <footer class="site-footer">
-  <div class="container">© 2025 Jacob Sapphire J C — All Rights Reserved</div>
+  <div class="container">
+    <p>© 2025 Jacob Sapphire J C — All Rights Reserved</p>
+    <p style="margin-top:6px; font-size:12px; color:var(--muted);">
+      GIS Analyst &nbsp;·&nbsp; Remote Sensing Specialist &nbsp;·&nbsp; AI Developer
+    </p>
+  </div>
 </footer>
 
-<script>
-// NAVIGATION — FADE + SLIDE ANIMATIONS
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav a");
-
-// hide all except home
-sections.forEach(sec => sec.style.display = "none");
-document.querySelector("#home").style.display = "block";
-
-navLinks.forEach(link => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const targetId = this.getAttribute("href");
-    const targetSection = document.querySelector(targetId);
-
-    // hide all sections
-    sections.forEach(sec => {
-      sec.style.opacity = "0";
-      sec.style.transform = "translateY(40px)";
-      setTimeout(() => sec.style.display = "none", 300);
-    });
-
-    // show clicked section with animation
-    setTimeout(() => {
-      targetSection.style.display = "block";
-      targetSection.style.opacity = "0";
-      targetSection.style.transform = "translateY(30px)";
-
-      setTimeout(() => {
-        targetSection.style.opacity = "1";
-        targetSection.style.transform = "translateY(0)";
-      }, 10);
-    }, 300);
-
-    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const skills = document.querySelector("#skills");
-  const bars = document.querySelectorAll(".bar .progress div");
-  const circles = document.querySelectorAll(".circle");
-  let animated = false;
-
-  function isVisible(elem) {
-    const rect = elem.getBoundingClientRect();
-    return rect.top < window.innerHeight - 100 && rect.bottom >= 0;
-  }
-
-  function animateSkills() {
-    if (animated || !isVisible(skills)) return;
-    animated = true;
-
-    // horizontal bars
-    bars.forEach(bar => {
-      const val = bar.getAttribute("data-width");
-      bar.style.width = "0%";
-      bar.offsetWidth; // force reflow
-      bar.style.transition = "width 1.5s ease";
-      bar.style.width = val + "%";
-    });
-
-    // circular skills
-    circles.forEach(circle => {
-      const percent = parseFloat(circle.getAttribute("data-percent")) || 0;
-      const progress = circle.querySelector(".progress");
-      const r = progress.getAttribute("r");
-      const circumference = 2 * Math.PI * r;
-
-      // initial hidden ring
-      progress.style.strokeDasharray = circumference;
-      progress.style.strokeDashoffset = circumference;
-      progress.offsetWidth; // force reflow
-
-      const offset = circumference - (percent / 100) * circumference;
-      progress.style.transition = "stroke-dashoffset 1.5s ease";
-      progress.style.strokeDashoffset = offset;
-    });
-  }
-
-  window.addEventListener("scroll", animateSkills);
-});
-</script>
-
-
-
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const skills = document.querySelector("#skills");
-  const bars = document.querySelectorAll(".bar .progress div");
-  const circles = document.querySelectorAll(".circle");
-  let animated = false;
-
-  // helper: check visibility
-  function isVisible(elem) {
-    const rect = elem.getBoundingClientRect();
-    return rect.top < window.innerHeight - 100 && rect.bottom >= 0;
-  }
-
-  function animateSkills() {
-    if (animated || !isVisible(skills)) return;
-    animated = true;
-
-    // Animate bars
-    bars.forEach(bar => {
-      const val = bar.getAttribute("data-width");
-      bar.style.width = "0%";
-      bar.offsetWidth; // force reflow
-      bar.style.transition = "width 1.5s ease";
-      bar.style.width = val + "%";
-    });
-
-    // Animate circles
-    circles.forEach(circle => {
-      const percent = parseFloat(circle.getAttribute("data-percent")) || 0;
-      const progress = circle.querySelector(".progress");
-      const r = progress.getAttribute("r");
-      const circumference = 2 * Math.PI * r;
-
-      progress.style.strokeDasharray = circumference;
-      progress.style.strokeDashoffset = circumference;
-      progress.offsetWidth; // force reflow
-
-      const offset = circumference - (percent / 100) * circumference;
-      progress.style.transition = "stroke-dashoffset 1.5s ease";
-      progress.style.strokeDashoffset = offset;
-    });
-  }
-
-  window.addEventListener("scroll", animateSkills);
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const element = document.querySelector(".fade-text");
-  const roles = [
-    "Master of Science in Applied Geography",
-    "GIS Analyst & AI Developer",
-    "Full-Stack Web & CUDA Developer"
-    
-  ];
-
-  let index = 0;
-
-  function showNextRole() {
-    // fade out
-    element.classList.remove("show");
-    setTimeout(() => {
-      // change text
-      element.textContent = roles[index];
-      // fade in
-      element.classList.add("show");
-      // move to next
-      index = (index + 1) % roles.length;
-    }, 600); // wait until fade out finishes
-  }
-
-  // Start animation
-  element.classList.add("show");
-  setInterval(showNextRole, 3000); // change every 3 seconds
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const typingElement = document.querySelector(".typing");
-  const titles = [
-    " Master of Science in Applied Geography",
-    " GIS Analyst & AI Developer",
-    " Full-Stack Web & CUDA Developer"
-  ];
-
-  let index = 0;
-  let charIndex = 0;
-  let currentTitle = "";
-  let isDeleting = false;
-
-  function typeEffect() {
-    currentTitle = titles[index];
-    const speed = isDeleting ? 50 : 100;
-
-    typingElement.textContent = currentTitle.substring(0, charIndex);
-
-    if (!isDeleting && charIndex < currentTitle.length) {
-      charIndex++;
-      setTimeout(typeEffect, speed);
-    } else if (isDeleting && charIndex > 0) {
-      charIndex--;
-      setTimeout(typeEffect, speed);
-    } else {
-      if (!isDeleting) {
-        isDeleting = true;
-        setTimeout(typeEffect, 1000); // pause before deleting
-      } else {
-        isDeleting = false;
-        index = (index + 1) % titles.length;
-        setTimeout(typeEffect, 500); // pause before next word
-      }
-    }
-  }
-
-  typeEffect();
-});
-</script>
-
-
-
-
+<!-- Data layer must load before main.js -->
+<script src="data.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
-
