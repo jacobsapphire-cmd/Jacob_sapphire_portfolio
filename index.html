@@ -4,238 +4,231 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jacob Sapphire J C — GIS Analyst & AI Developer</title>
-  <meta name="description" content="Jacob Sapphire J C — GIS Analyst, Remote Sensing Specialist & AI Developer. Portfolio showcasing morphometric analysis, AI projects, and geospatial research.">
+  <meta name="description" content="Jacob Sapphire J C — GIS Analyst, AI Developer & Web Developer. Portfolio showcasing morphometric analysis, AI projects, and geospatial research.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════
+<!-- ══════════════════════════════════════════════════════
      NAVIGATION
-════════════════════════════════════════════════════════ -->
+══════════════════════════════════════════════════════ -->
 <header class="site-header" id="site-header">
-  <div class="header-inner">
-    <div class="brand">Jacob Sapphire</div>
-    <nav class="nav" id="main-nav">
-      <a href="#home"     class="nav-link active" id="nav-home">Home</a>
-      <a href="#about"    class="nav-link"         id="nav-about">About</a>
-      <a href="#skills"   class="nav-link"         id="nav-skills">Skills</a>
-      <a href="#projects" class="nav-link"         id="nav-projects">Projects</a>
-      <a href="#contact"  class="nav-link"         id="nav-contact">Contact</a>
-    </nav>
-  </div>
+  <div class="brand">Jacob · Sapphire</div>
+  <nav class="nav" id="main-nav">
+    <a href="#home"     class="nav-link active" id="nav-home">Home</a>
+    <a href="#about"    class="nav-link"         id="nav-about">About</a>
+    <a href="#showcase" class="nav-link"         id="nav-showcase">Showcase</a>
+    <a href="#contact"  class="nav-link"         id="nav-contact">Contact</a>
+  </nav>
+  <div class="live-time" id="live-time"></div>
 </header>
 
-<!-- ═══════════════════════════════════════════════════════
+<!-- ══════════════════════════════════════════════════════
      HERO
-════════════════════════════════════════════════════════ -->
+══════════════════════════════════════════════════════ -->
 <section id="home" class="hero">
-  <div class="container hero-grid">
 
-    <!-- Left content -->
-    <div class="hero-left">
-      <div class="hero-badge">👋 Hello, It's Me</div>
-
-      <h1 class="hero-name">
-        Jacob Sapphire <span class="highlight">J C</span>
-      </h1>
-
-      <h2 class="hero-role">
-        And I'm a&nbsp;<span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
-      </h2>
-
-      <p class="hero-bio">
-        GIS Analyst &amp; AI Developer transforming geospatial data into actionable insights,
-        interactive dashboards, and web applications — using ArcGIS Pro, QGIS, Python, and Blender 3D.
-      </p>
-
-      <div class="hero-cta">
-        <a href="Jacob_Sapphire_CV.pdf" target="_blank" class="btn-primary" id="hero-cv-btn">
-          <i class="fa-solid fa-download"></i> Download CV
-        </a>
-        <a href="#contact" class="btn-outline" id="hero-contact-btn">
-          <i class="fa-solid fa-envelope"></i> Get In Touch
-        </a>
-      </div>
-
-      <div class="hero-socials">
-        <a href="mailto:Sapphireajs@gmail.com"
-           class="social-icon" id="social-email" title="Email">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-        <a href="tel:+919384630838"
-           class="social-icon" id="social-phone" title="Phone">
-          <i class="fa-solid fa-phone"></i>
-        </a>
-        <a href="https://wa.me/919384630838" target="_blank"
-           class="social-icon" id="social-wa" title="WhatsApp">
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/jacob-sapphire-4657a327a" target="_blank"
-           class="social-icon" id="social-li" title="LinkedIn">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </div>
+  <div class="hero-left">
+    <div class="available-badge">
+      <span class="available-dot"></span>
+      Available for Work
     </div>
 
-    <!-- Right — profile photo -->
-    <div class="hero-right">
-      <div class="photo-wrapper">
-        <div class="photo-ring"></div>
-        <div class="photo-glow">
-          <img src="IMG_20241015_192223.jpg" alt="Jacob Sapphire J C" class="profile-photo">
-        </div>
-      </div>
+    <h1 class="hero-name">
+      GIS Analyst<br>&amp; AI Developer
+    </h1>
+
+    <p class="hero-subtitle">
+      Transforming geospatial data into actionable insights, interactive
+      dashboards, and web applications — using ArcGIS Pro, QGIS, Python,
+      and Blender 3D.
+    </p>
+
+    <div class="hero-tags">
+      <span class="hero-tag">ArcGIS Pro</span>
+      <span class="hero-tag">QGIS</span>
+      <span class="hero-tag">Python</span>
+      <span class="hero-tag">Flask</span>
+      <span class="hero-tag">Blender 3D</span>
     </div>
 
+    <div class="hero-buttons">
+      <a href="Jacob_Sapphire_CV.pdf" target="_blank" class="btn-dark" id="hero-cv-btn">
+        <i class="fa-solid fa-download"></i> Download CV
+      </a>
+      <a href="#about" class="btn-outline-w" id="hero-about-btn">About Me</a>
+    </div>
   </div>
+
+  <div class="hero-right">
+    <img src="IMG_20241015_192223.jpg" alt="Jacob Sapphire J C" class="hero-photo">
+  </div>
+
 </section>
 
-<!-- ═══════════════════════════════════════════════════════
+<!-- ══════════════════════════════════════════════════════
+     MARQUEE
+══════════════════════════════════════════════════════ -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marquee-track"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
      ABOUT
-════════════════════════════════════════════════════════ -->
+══════════════════════════════════════════════════════ -->
 <section id="about">
   <div class="container">
+    <div class="section-label">Who Am I</div>
+    <h2 class="section-title">About Me</h2>
 
-    <div class="section-header">
-      <div class="section-tag">Who Am I</div>
-      <h2 class="section-title">About Me</h2>
-      <div class="section-divider"></div>
-    </div>
+    <div class="about-grid">
 
-    <div class="about-content">
+      <!-- Photo -->
+      <div class="about-photo-wrap reveal">
+        <img src="IMG_20241015_192223.jpg" alt="Jacob Sapphire J C">
+        <div class="about-name-overlay">Jacob Sapphire J C — M.Sc. Applied Geography</div>
+      </div>
 
-      <!-- Bio card -->
-      <div class="about-bio glass-card reveal">
-        <p>
-          I am <strong>Jacob Sapphire J C</strong>, a GIS Analyst &amp; AI Developer with
-          hands-on experience in spatial analysis, morphometric studies, data visualization,
-          and automation using AI and Python.
-        </p>
-        <p>
-          I work with <strong>ArcGIS Pro, QGIS, Google Earth Pro, Blender 3D,</strong> and
-          <strong>Python (Flask)</strong> to transform geospatial data into actionable insights,
-          interactive dashboards, and web applications.
-        </p>
-        <p>
-          My PG project — <strong>GIS-Based Morphometric Analysis of Agniyar River Basin</strong> —
-          involved watershed delineation, hydrology layer extraction, and the first 3D Blender
-          terrain visualization in the PG Geography programme at University of Madras.
-        </p>
+      <!-- Info -->
+      <div class="about-info reveal">
+        <div>
+          <p class="about-bio-text">
+            I am <strong>Jacob Sapphire J C</strong>, a GIS Analyst &amp; AI Developer with
+            hands-on experience in spatial analysis, morphometric studies, data
+            visualization, and automation using AI and Python.
+          </p>
+          <p class="about-bio-text" style="margin-top:14px;">
+            I work with <strong>ArcGIS Pro, QGIS, Google Earth Pro, Blender 3D,</strong>
+            and <strong>Python (Flask)</strong> to transform geospatial data into actionable
+            insights, interactive dashboards, and web applications.
+          </p>
+          <p class="about-bio-text" style="margin-top:14px;">
+            My PG project — <strong>GIS-Based Morphometric Analysis of Agniyar River Basin</strong>
+            — featured the first-ever 3D Blender terrain visualization in the PG
+            Geography programme at University of Madras.
+          </p>
+        </div>
 
         <div class="about-stats">
-          <div>
-            <div class="stat-num">2+</div>
-            <div class="stat-label">Years Experience</div>
-          </div>
-          <div>
-            <div class="stat-num">3</div>
-            <div class="stat-label">Major Projects</div>
-          </div>
-          <div>
-            <div class="stat-num">10+</div>
-            <div class="stat-label">Tools Mastered</div>
-          </div>
-          <div>
-            <div class="stat-num">2</div>
-            <div class="stat-label">Internships</div>
-          </div>
+          <div class="stat-card"><div class="stat-num">2+</div><div class="stat-lbl">Years Exp.</div></div>
+          <div class="stat-card"><div class="stat-num">5</div> <div class="stat-lbl">Projects</div></div>
+          <div class="stat-card"><div class="stat-num">10+</div><div class="stat-lbl">Tools</div></div>
+          <div class="stat-card"><div class="stat-num">2</div> <div class="stat-lbl">Internships</div></div>
+        </div>
+
+        <div>
+          <div class="exp-header">Experience &amp; Education</div>
+          <div class="timeline" id="timeline"></div>
         </div>
       </div>
 
-      <!-- Timeline — populated by main.js -->
-      <div>
-        <div class="timeline-header">Experience &amp; Education</div>
-        <div class="timeline" id="timeline"></div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════
-     SKILLS
-════════════════════════════════════════════════════════ -->
-<section id="skills">
+<!-- ══════════════════════════════════════════════════════
+     SHOWCASE
+══════════════════════════════════════════════════════ -->
+<section id="showcase">
   <div class="container">
+    <div class="section-label">My Work</div>
+    <h2 class="section-title">Portfolio Showcase</h2>
 
-    <div class="section-header">
-      <div class="section-tag">What I Know</div>
-      <h2 class="section-title">Skills</h2>
-      <div class="section-divider"></div>
+    <div class="showcase-tabs">
+      <button class="tab-btn active" id="tab-projects"  onclick="switchTab('projects')">Projects</button>
+      <button class="tab-btn"        id="tab-techstack" onclick="switchTab('techstack')">Tech Stack</button>
     </div>
 
-    <div class="skills-layout">
-      <!-- Technical bars — populated by main.js -->
-      <div class="glass-card skills-panel">
-        <div class="skills-panel-title">Technical Skills</div>
-        <div id="skill-bars"></div>
-      </div>
-
-      <!-- Professional circles — populated by main.js -->
-      <div class="glass-card skills-panel">
-        <div class="skills-panel-title">Professional Skills</div>
-        <div class="circles-grid" id="skill-circles"></div>
-      </div>
-    </div>
-
+    <div id="panel-projects"  class="projects-grid"></div>
+    <div id="panel-techstack" class="tech-grid" style="display:none;"></div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════
-     PROJECTS
-════════════════════════════════════════════════════════ -->
-<section id="projects">
-  <div class="container">
-
-    <div class="section-header">
-      <div class="section-tag">My Work</div>
-      <h2 class="section-title">Projects</h2>
-      <div class="section-divider"></div>
-    </div>
-
-    <!-- Cards populated by main.js -->
-    <div class="projects-grid" id="projects-grid"></div>
-
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════
+<!-- ══════════════════════════════════════════════════════
      CONTACT
-════════════════════════════════════════════════════════ -->
+══════════════════════════════════════════════════════ -->
 <section id="contact">
   <div class="container">
+    <div class="contact-layout">
 
-    <div class="section-header">
-      <div class="section-tag">Let's Talk</div>
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="section-divider"></div>
-      <p class="section-sub">
-        Actively seeking full-time roles, freelance projects, and collaborations.
-      </p>
+      <!-- Left -->
+      <div class="reveal">
+        <div class="section-label" style="justify-content:flex-start;margin-bottom:14px;">Let's Talk</div>
+        <h2 class="contact-heading">Let's work<br>together.</h2>
+        <p class="contact-blurb">
+          Have an idea, project, or collaboration in mind?
+          Send me a message and let's build something great together.
+        </p>
+        <div class="contact-icons">
+          <a href="mailto:Sapphireajs@gmail.com" class="c-icon-btn" id="c-email" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/919384630838" target="_blank" class="c-icon-btn" id="c-wa" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jacob-sapphire-4657a327a" target="_blank" class="c-icon-btn" id="c-li" title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="tel:+919384630838" class="c-icon-btn" id="c-phone" title="Phone">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="reveal">
+        <div class="contact-form-card">
+          <div class="form-title">
+            Send Message <span class="direct-tag">Direct</span>
+          </div>
+          <p class="form-desc">
+            Your message opens directly in WhatsApp — no spam, just real connection.
+          </p>
+          <input  type="text" class="form-input"    id="contact-name"    placeholder="Your Name">
+          <textarea            class="form-textarea" id="contact-message" placeholder="Write your message..."></textarea>
+          <button class="form-submit" id="wa-send-btn" onclick="sendWhatsApp()">
+            <i class="fa-solid fa-paper-plane"></i> SEND MESSAGE
+          </button>
+          <div class="form-reply">Usually replies within a few hours</div>
+        </div>
+      </div>
+
     </div>
-
-    <!-- Cards populated by main.js -->
-    <div class="contact-grid" id="contact-grid"></div>
-
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════
+<!-- ══════════════════════════════════════════════════════
      FOOTER
-════════════════════════════════════════════════════════ -->
+══════════════════════════════════════════════════════ -->
 <footer class="site-footer">
   <div class="container">
-    <p>© 2026 Jacob Sapphire J C — All Rights Reserved</p>
-    <p style="margin-top:6px; font-size:12px; color:var(--muted);">
-      GIS Analyst &nbsp;·&nbsp; Remote Sensing Specialist &nbsp;·&nbsp; AI Developer
+    <p class="follow-label">Follow Me</p>
+    <div class="footer-socials">
+      <a href="mailto:Sapphireajs@gmail.com" class="footer-social" id="fs-email" title="Email">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="https://wa.me/919384630838" target="_blank" class="footer-social" id="fs-wa" title="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jacob-sapphire-4657a327a" target="_blank" class="footer-social" id="fs-li" title="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="tel:+919384630838" class="footer-social" id="fs-phone" title="Phone">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+    <div class="footer-rule"></div>
+    <p class="footer-copy">
+      Copyright &copy; 2026 All Rights Reserved |
+      Created by <strong>Jacob Sapphire J C</strong>
     </p>
   </div>
 </footer>
 
-<!-- Data layer must load before main.js -->
 <script src="data.js"></script>
 <script src="main.js"></script>
 </body>
