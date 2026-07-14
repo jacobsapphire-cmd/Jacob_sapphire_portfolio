@@ -377,7 +377,7 @@ section:not(.hero) { padding: 100px 0; }
   margin-bottom: 4px;
 }
 .tl-role { font-family: var(--font-d); font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 2px; }
-.tl-company { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+.tl-company { font-size: 12px; color: #666; margin-bottom: 8px; }
 .tl-points { list-style: none; display: flex; flex-direction: column; gap: 3px; }
 .tl-points li {
   font-size: 12px;
