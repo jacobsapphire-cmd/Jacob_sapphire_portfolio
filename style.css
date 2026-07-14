@@ -131,8 +131,8 @@ img { max-width: 100%; display: block; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 12px;
-  /* let it overflow into photo area */
-  white-space: nowrap;
+  /* two-line name */
+  white-space: normal;
 }
 
 .hero-role {
