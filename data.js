@@ -9,7 +9,6 @@ const portfolioData = {
     shortName: "Jacob",
     roles: [
       "GIS Analyst",
-      "Remote Sensing Specialist",
       "AI Developer",
       "Web Developer",
       "M.Sc. Applied Geography"
