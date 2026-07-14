@@ -64,7 +64,7 @@ const portfolioData = {
       type:    "edu",
       period:  "2020 – 2023",
       role:    "B.Sc. Geography",
-      company: "University of Madras",
+      company: "Madras Christian College",
       highlights: []
     }
   ],
@@ -80,8 +80,7 @@ const portfolioData = {
       { name: "Blender 3D",    logo: "logos/blender.png",  level: 80 },
       { name: "Python",        logo: "logos/python.png",   level: 75 },
       { name: "Visual Studio", logo: "logos/vs.png",       level: 75 },
-      { name: "Figma",         logo: "logos/figma.png",    level: 70 },
-      { name: "AutoCAD",       logo: "logos/autocad.png",  level: 60 }
+      { name: "Figma",         logo: "logos/figma.png",    level: 70 }
     ],
     professional: [
       { name: "Resilience",       percent: 85 },
