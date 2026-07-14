@@ -1,110 +1,86 @@
-// ============================================================
-//  MAIN.JS — Portfolio logic, reads from data.js
-// ============================================================
+'use strict';
+/* ============================================================
+   PORTFOLIO — main.js
+   Renders dynamic content from data.js into the page.
+   All content strings live in data.js only.
+   ============================================================ */
+const D = portfolioData;
 
-document.addEventListener('DOMContentLoaded', () => {
-  buildTimeline();
-  buildSkillBars();
-  buildSkillCircles();
-  buildProjects();
-  buildContact();
-  initTypewriter();
-  initScrollObserver();
-  initNavHighlight();
-  initHeaderScroll();
-});
+/* ─── Live Clock ──────────────────────────────────────────── */
+function updateClock() {
+  const el = document.getElementById('live-time');
+  if (!el) return;
+  const now = new Date();
+  el.textContent = now.toLocaleTimeString('en-US', {
+    hour: '2-digit', minute: '2-digit', hour12: false
+  });
+}
+updateClock();
+setInterval(updateClock, 1000);
 
-// ── Timeline (About) ─────────────────────────────────────
+/* ─── Marquee ─────────────────────────────────────────────── */
+function buildMarquee() {
+  const track = document.getElementById('marquee-track');
+  if (!track) return;
+  const words = [
+    'GIS Analyst', 'Jacob Sapphire', 'AI Developer',
+    'Web Developer', 'M.Sc. Geography', 'Blender 3D'
+  ];
+  // Build one set
+  const makeSet = () => words.map(w =>
+    `<span class="marquee-word">${w}</span><span class="marquee-sep">·</span>`
+  ).join('');
+  // Duplicate so CSS -50% creates seamless loop
+  track.innerHTML = makeSet() + makeSet();
+}
+
+/* ─── Timeline ────────────────────────────────────────────── */
 function buildTimeline() {
-  const container = document.getElementById('timeline');
-  if (!container) return;
-
-  container.innerHTML = portfolioData.timeline.map(item => `
-    <div class="timeline-item reveal">
-      <div class="timeline-dot ${item.type === 'edu' ? 'edu' : ''}"></div>
-      <div class="timeline-period">
-        ${item.type === 'work' ? '💼' : '🎓'} ${item.period}
-      </div>
-      <div class="timeline-role">${item.role}</div>
-      <div class="timeline-company">${item.company}</div>
-      ${item.highlights.length ? `
-        <ul class="timeline-highlights">
-          ${item.highlights.map(h => `<li>${h}</li>`).join('')}
-        </ul>` : ''}
+  const el = document.getElementById('timeline');
+  if (!el || !D.timeline) return;
+  el.innerHTML = D.timeline.map(t => `
+    <div class="timeline-item">
+      <div class="tl-period">${t.period || ''}</div>
+      <div class="tl-role">${t.role || ''}</div>
+      <div class="tl-company">${t.company || ''}</div>
+      ${t.highlights && t.highlights.length
+        ? `<ul class="tl-points">${t.highlights.map(h => `<li>${h}</li>`).join('')}</ul>`
+        : ''}
     </div>
   `).join('');
 }
 
-// ── Skill Bars ───────────────────────────────────────────
-function buildSkillBars() {
-  const container = document.getElementById('skill-bars');
-  if (!container) return;
-
-  container.innerHTML = portfolioData.skills.technical.map(skill => `
-    <div class="skill-bar">
-      <div class="skill-bar-header">
-        <div class="skill-bar-name">
-          <img src="${skill.logo}" alt="${skill.name}" class="skill-logo"
-               onerror="this.style.display='none'">
-          ${skill.name}
-        </div>
-        <div class="skill-percent">${skill.level}%</div>
-      </div>
-      <div class="skill-track">
-        <div class="skill-fill" data-width="${skill.level}"></div>
-      </div>
-    </div>
-  `).join('');
-}
-
-// ── Skill Circles ────────────────────────────────────────
-function buildSkillCircles() {
-  const container = document.getElementById('skill-circles');
-  if (!container) return;
-
-  const r = 45;
-  const circumference = +(2 * Math.PI * r).toFixed(2);
-
-  container.innerHTML = portfolioData.skills.professional.map(skill => `
-    <div class="circle-box">
-      <div class="circle" data-percent="${skill.percent}">
-        <svg viewBox="0 0 100 100">
-          <circle class="bg-ring"       cx="50" cy="50" r="${r}"/>
-          <circle class="progress-ring" cx="50" cy="50" r="${r}"
-            stroke-dasharray="${circumference}"
-            stroke-dashoffset="${circumference}"/>
-        </svg>
-        <div class="circle-label">${skill.percent}%</div>
-      </div>
-      <h5>${skill.name}</h5>
-    </div>
-  `).join('');
-}
-
-// ── Projects ─────────────────────────────────────────────
+/* ─── Projects Grid ───────────────────────────────────────── */
 function buildProjects() {
-  const container = document.getElementById('projects-grid');
-  if (!container) return;
+  const grid = document.getElementById('panel-projects');
+  if (!grid || !D.projects) return;
 
-  container.innerHTML = portfolioData.projects.map(p => {
+  grid.innerHTML = D.projects.map(p => {
+    /* Media: video OR icon placeholder */
+    let mediaHtml;
+    if (p.video) {
+      mediaHtml = `
+        <video autoplay loop muted playsinline preload="metadata">
+          <source src="${p.video}" type="video/mp4">
+        </video>`;
+    } else {
+      mediaHtml = `
+        <div class="project-no-video">
+          <i class="fa-solid fa-diagram-project"></i>
+          <span>${p.title}</span>
+        </div>`;
+    }
+
+    /* Footer actions */
     const actions = [];
-    if (p.link) actions.push(`
-      <a href="${p.link}" target="_blank" class="btn-sm primary" id="proj-link-${p.id}">
-        <i class="fa-solid fa-arrow-up-right-from-square"></i> Launch App
-      </a>`);
-    if (p.pdf)  actions.push(`
-      <a href="${p.pdf}" target="_blank" class="btn-sm outline" id="proj-pdf-${p.id}">
-        <i class="fa-solid fa-file-pdf"></i> View PDF
-      </a>`);
-
-    const mediaHtml = p.video
-      ? `<video autoplay loop muted playsinline>
-           <source src="${p.video}" type="video/mp4">
-         </video>`
-      : `<div class="project-no-video">
-           <i class="fa-solid fa-diagram-project"></i>
-           <span>${p.title}</span>
-         </div>`;
+    if (p.link) {
+      actions.push(`<a href="${p.link}" target="_blank" class="proj-link">
+        Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>`);
+    }
+    if (p.pdf) {
+      actions.push(`<a href="${p.pdf}" target="_blank" class="proj-dl" title="View PDF">
+        <i class="fa-solid fa-file-pdf"></i></a>`);
+    }
 
     return `
       <div class="project-card reveal" id="card-${p.id}">
@@ -112,185 +88,124 @@ function buildProjects() {
           ${p.label ? `<span class="project-label">${p.label}</span>` : ''}
           ${mediaHtml}
         </div>
-        <div class="project-info">
-          <div class="project-subtitle">${p.subtitle}</div>
-          <h3 class="project-title">${p.title}</h3>
+        <div class="project-body">
+          <div class="project-name">${p.title}</div>
           <p class="project-desc">${p.description}</p>
           <div class="project-stack">
-            ${p.stack.map(s => `<span class="stack-badge">${s}</span>`).join('')}
+            ${(p.stack || []).map(s => `<span class="stack-pill">${s}</span>`).join('')}
           </div>
-          <div class="project-actions">${actions.join('')}</div>
+          ${actions.length
+            ? `<div class="project-footer">${actions.join('')}</div>`
+            : ''}
         </div>
       </div>`;
   }).join('');
 }
 
-// ── Contact Cards ────────────────────────────────────────
-function buildContact() {
-  const container = document.getElementById('contact-grid');
-  if (!container) return;
+/* ─── Tech Stack Grid ─────────────────────────────────────── */
+function buildTechStack() {
+  const grid = document.getElementById('panel-techstack');
+  if (!grid) return;
 
-  const { social } = portfolioData.profile;
-  const items = [
-    {
-      id: 'contact-email',
-      icon: 'fa-solid fa-envelope',
-      label: 'Email',
-      value: social.email,
-      href: `mailto:${social.email}`
-    },
-    {
-      id: 'contact-phone',
-      icon: 'fa-solid fa-phone',
-      label: 'Phone',
-      value: social.phone,
-      href: `tel:${social.phoneTel}`
-    },
-    {
-      id: 'contact-whatsapp',
-      icon: 'fa-brands fa-whatsapp',
-      label: 'WhatsApp',
-      value: 'WhatsApp Chat',
-      href: social.whatsapp,
-      target: '_blank'
-    },
-    {
-      id: 'contact-linkedin',
-      icon: 'fa-brands fa-linkedin',
-      label: 'LinkedIn',
-      value: 'jacob-sapphire-4657a327a',
-      href: social.linkedin,
-      target: '_blank'
-    }
-  ];
+  const items = (D.skills && D.skills.technical) ? D.skills.technical : [];
+  if (!items.length) return;
 
-  container.innerHTML = items.map(item => `
-    <a href="${item.href}" ${item.target ? `target="${item.target}"` : ''}
-       class="contact-card reveal" id="${item.id}">
-      <div class="contact-card-icon">
-        <i class="${item.icon}"></i>
-      </div>
-      <div>
-        <div class="contact-card-label">${item.label}</div>
-        <div class="contact-card-value">${item.value}</div>
-      </div>
-    </a>
+  grid.innerHTML = items.map(s => `
+    <div class="tech-card">
+      ${s.logo
+        ? `<img src="${s.logo}" alt="${s.name}" loading="lazy">`
+        : `<i class="fa-solid fa-code" style="font-size:32px;color:var(--muted);"></i>`}
+      <div class="tech-name">${s.name}</div>
+    </div>
   `).join('');
 }
 
-// ── Typewriter ───────────────────────────────────────────
-function initTypewriter() {
-  const el = document.getElementById('typewriter');
-  if (!el) return;
+/* ─── Tab Switcher ────────────────────────────────────────── */
+function switchTab(tab) {
+  const panelP  = document.getElementById('panel-projects');
+  const panelT  = document.getElementById('panel-techstack');
+  const btnP    = document.getElementById('tab-projects');
+  const btnT    = document.getElementById('tab-techstack');
 
-  const roles = portfolioData.profile.roles;
-  let roleIndex = 0, charIndex = 0, isDeleting = false;
-
-  function tick() {
-    const current = roles[roleIndex];
-    const speed   = isDeleting ? 50 : 100;
-
-    el.textContent = current.substring(0, charIndex);
-
-    if (!isDeleting && charIndex < current.length) {
-      charIndex++;
-      setTimeout(tick, speed);
-    } else if (isDeleting && charIndex > 0) {
-      charIndex--;
-      setTimeout(tick, speed);
-    } else {
-      if (!isDeleting) {
-        isDeleting = true;
-        setTimeout(tick, 1500);           // pause before deleting
-      } else {
-        isDeleting  = false;
-        roleIndex   = (roleIndex + 1) % roles.length;
-        setTimeout(tick, 500);            // pause before next role
-      }
-    }
+  if (tab === 'projects') {
+    panelP.style.display = 'grid';
+    panelT.style.display = 'none';
+    btnP.classList.add('active');
+    btnT.classList.remove('active');
+  } else {
+    panelP.style.display = 'none';
+    panelT.style.display = 'grid';
+    btnP.classList.remove('active');
+    btnT.classList.add('active');
   }
-
-  tick();
+  // Re-run reveal in case new elements appeared
+  initReveal();
 }
 
-// ── Skill Animations ─────────────────────────────────────
-let skillsAnimated = false;
-
-function animateSkills() {
-  if (skillsAnimated) return;
-  skillsAnimated = true;
-
-  document.querySelectorAll('.skill-fill').forEach(fill => {
-    const w = fill.getAttribute('data-width');
-    requestAnimationFrame(() => { fill.style.width = w + '%'; });
-  });
-
-  document.querySelectorAll('.circle').forEach(circle => {
-    const pct  = parseFloat(circle.getAttribute('data-percent'));
-    const ring = circle.querySelector('.progress-ring');
-    if (!ring) return;
-    const r            = 45;
-    const circumference = 2 * Math.PI * r;
-    const offset       = circumference - (pct / 100) * circumference;
-    requestAnimationFrame(() => { ring.style.strokeDashoffset = offset; });
-  });
+/* ─── WhatsApp Form ───────────────────────────────────────── */
+function sendWhatsApp() {
+  const name = (document.getElementById('contact-name')?.value || '').trim();
+  const msg  = (document.getElementById('contact-message')?.value || '').trim();
+  if (!msg) {
+    alert('Please write a message before sending.');
+    return;
+  }
+  const text = name
+    ? `Hi Jacob! I'm ${name}.\n\n${msg}`
+    : `Hi Jacob!\n\n${msg}`;
+  window.open(
+    `https://wa.me/919384630838?text=${encodeURIComponent(text)}`,
+    '_blank'
+  );
 }
 
-// ── Intersection Observer ────────────────────────────────
-function initScrollObserver() {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-
-      // Reveal animation
-      if (entry.target.classList.contains('reveal')) {
-        entry.target.classList.add('visible');
-      }
-
-      // Skills section trigger
-      if (entry.target.id === 'skills') {
-        setTimeout(animateSkills, 200);
+/* ─── Scroll Reveal ───────────────────────────────────────── */
+function initReveal() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  const skillsSec = document.getElementById('skills');
-  if (skillsSec) observer.observe(skillsSec);
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => obs.observe(el));
 }
 
-// ── Nav Active Highlight ─────────────────────────────────
-function initNavHighlight() {
+/* ─── Active Nav on Scroll ────────────────────────────────── */
+function initNav() {
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const links    = document.querySelectorAll('.nav-link');
+  const header   = document.getElementById('site-header');
 
-  // Smooth scroll on click
-  navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
+  const onScroll = () => {
+    const y = window.scrollY;
 
-  // Active state on scroll
-  window.addEventListener('scroll', () => {
-    let current = 'home';
+    /* tint header after scroll */
+    if (header) header.style.background =
+      y > 60 ? 'rgba(8,8,8,0.97)' : 'rgba(8,8,8,0.92)';
+
+    /* highlight active section */
+    let current = '';
     sections.forEach(sec => {
-      if (sec.getBoundingClientRect().top <= 100) current = sec.id;
+      if (y >= sec.offsetTop - 100) current = sec.id;
     });
-    navLinks.forEach(link => {
-      link.classList.toggle('active',
-        link.getAttribute('href') === `#${current}`);
+    links.forEach(l => {
+      l.classList.toggle('active',
+        l.getAttribute('href') === `#${current}`);
     });
-  }, { passive: true });
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-// ── Header shadow on scroll ──────────────────────────────
-function initHeaderScroll() {
-  const header = document.getElementById('site-header');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 40);
-  }, { passive: true });
-}
+/* ─── Init ────────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  buildMarquee();
+  buildTimeline();
+  buildProjects();
+  buildTechStack();
+  initReveal();
+  initNav();
+});
