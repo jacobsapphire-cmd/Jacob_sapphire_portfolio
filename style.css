@@ -858,9 +858,25 @@ section:not(.hero) { padding: 100px 0; }
 
 /* ── RESPONSIVE ─────────────────────────────────────────── */
 @media (max-width: 960px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-right { display: none; }
-  .hero-left { padding: 60px 24px; text-align: center; align-items: center; }
+  .hero { grid-template-columns: 1fr; min-height: auto; padding-bottom: 60px; }
+  .hero-right {
+    display: block;
+    width: calc(100% - 48px);
+    margin: 0 auto 32px;
+    height: 380px;
+    border-radius: var(--r);
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--glass-shadow);
+  }
+  .hero-right::before {
+    background: linear-gradient(to bottom, #04050a 0%, rgba(4, 5, 10, 0) 40%);
+  }
+  .hero-right::after {
+    background: linear-gradient(to top, #04050a 0%, rgba(4, 5, 10, 0) 100%);
+    height: 120px;
+  }
+  .hero-left { padding: 60px 24px 24px; text-align: center; align-items: center; }
   .hero-role { text-align: center; margin-bottom: 20px; }
   .hero-subtitle { text-align: center; margin-left: auto; margin-right: auto; }
   .hero-tags { justify-content: center; margin-bottom: 28px; }
