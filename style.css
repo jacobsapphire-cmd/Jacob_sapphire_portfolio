@@ -892,11 +892,11 @@ section:not(.hero) { padding: 100px 0; }
   .hero-left {
     position: relative;
     z-index: 2;
-    padding: 100px 24px 60px;
+    padding: 40px 24px;
     text-align: center;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    min-height: calc(100vh - var(--nav-h));
     width: 100%;
     display: flex;
     flex-direction: column;
