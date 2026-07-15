@@ -860,28 +860,40 @@ section:not(.hero) { padding: 100px 0; }
 @media (max-width: 960px) {
   .hero { grid-template-columns: 1fr; }
   .hero-right { display: none; }
-  .hero-left { padding: 60px 28px; }
+  .hero-left { padding: 60px 24px; text-align: center; align-items: center; }
+  .hero-role { text-align: center; margin-bottom: 20px; }
+  .hero-subtitle { text-align: center; margin-left: auto; margin-right: auto; }
+  .hero-tags { justify-content: center; margin-bottom: 28px; }
+  .hero-buttons { flex-direction: column; width: 100%; gap: 10px; max-width: 320px; margin: 0 auto; }
+  .btn-dark, .btn-outline-w { width: 100%; justify-content: center; }
 
-  .about-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
   .about-photo-wrap { max-width: 340px; margin: 0 auto; aspect-ratio: 1/1; }
   .about-stats { grid-template-columns: repeat(2,1fr); }
+  .about-info { gap: 24px; }
 
+  .showcase-tabs { margin-left: auto; margin-right: auto; }
   .project-card { grid-template-columns: 1fr; }
   .project-media { min-height: 220px; }
+  .project-body { padding: 24px; }
   .tech-grid { grid-template-columns: repeat(3,1fr); }
 
-  .contact-layout { grid-template-columns: 1fr; }
-  .site-header { padding: 0 20px; }
+  .contact-layout { grid-template-columns: 1fr; gap: 32px; }
+  .site-header { padding: 0 16px; justify-content: center; }
+  .nav { width: 100%; justify-content: center; gap: 4px; flex-wrap: wrap; }
   .live-time { display: none; }
-  .container { padding: 0 24px; }
+  .container { padding: 0 20px; }
 }
 
 @media (max-width: 600px) {
-  .hero-name { font-size: 2.8rem; letter-spacing: -0.5px; }
+  .hero-left { padding: 48px 16px; }
+  .hero-name { font-size: 3.2rem; letter-spacing: -2.5px; line-height: 0.9; }
   .section-title { font-size: 2.2rem; }
   .tech-grid { grid-template-columns: repeat(2,1fr); }
-  .nav-link { font-size: 10px; padding: 5px 8px; }
+  .nav-link { font-size: 10px; padding: 6px 8px; letter-spacing: 0.5px; }
   .about-stats { grid-template-columns: repeat(2,1fr); }
   .hero-tags { gap: 6px; }
-  .hero-tag { padding: 7px 14px; }
+  .hero-tag { padding: 6px 12px; font-size: 10px; }
+  .project-body { padding: 20px; }
+  .contact-form-card { padding: 20px; }
 }
