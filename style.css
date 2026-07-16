@@ -878,7 +878,7 @@ section:not(.hero) { padding: 100px 0; }
     pointer-events: none;
   }
   .hero-right::before {
-    background: linear-gradient(to right, rgba(4, 5, 10, 0.95) 40%, rgba(4, 5, 10, 0.2) 100%), linear-gradient(to bottom, rgba(4,5,10,0.3) 0%, rgba(4,5,10,0) 30%, rgba(4,5,10,0.6) 85%, #04050a 100%);
+    background: linear-gradient(to right, rgba(4, 5, 10, 0.92) 35%, rgba(4, 5, 10, 0.05) 75%), linear-gradient(to bottom, rgba(4,5,10,0.4) 0%, rgba(4,5,10,0) 25%, rgba(4,5,10,0.5) 80%, #04050a 100%);
   }
   .hero-right::after {
     display: none;
